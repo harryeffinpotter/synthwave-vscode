@@ -5,8 +5,25 @@
   const tokenReplacements = {
     /* Red */
     'fe4450': "color: #fff5f6; text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c[NEON_BRIGHTNESS], 0 0 5px #fc1f2c[NEON_BRIGHTNESS], 0 0 25px #fc1f2c[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Neon pink */
-    'ff7edb': "color: #f92aad; text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3; backface-visibility: hidden;",
+    /* Light neon pink */
+    'ff99e5': "color: #ffccf0; text-shadow: 0 0 2px #100c0f, 0 0 5px #ff66d933, 0 0 10px #fff3; backface-visibility: hidden;",
+    /* Cyan/Light Blue for variables */
+    '6fc3df': "color: #b8e7ff; text-shadow: 0 0 2px #000, 0 0 10px #00d4ff[NEON_BRIGHTNESS], 0 0 20px #00d4ff[NEON_BRIGHTNESS], 0 0 40px #00d4ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* BRIGHT CYAN for variables */
+    '00ffff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #00ffff[NEON_BRIGHTNESS], 0 0 20px #00ffff[NEON_BRIGHTNESS], 0 0 40px #00ffff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* LIGHT PINK for functions */
+    'ffb3ff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ff00ff[NEON_BRIGHTNESS], 0 0 20px #ff00ff[NEON_BRIGHTNESS], 0 0 40px #ff00ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* HOT PINK for classes */
+    'ff1493': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ff1493[NEON_BRIGHTNESS], 0 0 20px #ff1493[NEON_BRIGHTNESS], 0 0 40px #ff1493[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* LIGHT GREEN for keywords */
+    '7fff00': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #7fff00[NEON_BRIGHTNESS], 0 0 20px #7fff00[NEON_BRIGHTNESS], 0 0 40px #7fff00[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* WHITE for operators */
+    'ffffff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ffffff[NEON_BRIGHTNESS], 0 0 20px #ffffff[NEON_BRIGHTNESS], 0 0 40px #ffffff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Dark cyan for strings */
+    '008b8b': "color: #00ffff; text-shadow: 0 0 2px #000, 0 0 10px #008b8b[NEON_BRIGHTNESS], 0 0 20px #008b8b[NEON_BRIGHTNESS], 0 0 40px #008b8b[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Light Blue (was yellow) */
+    'a0d8ef': "color: #d0f0ff; text-shadow: 0 0 2px #001722, 0 0 8px #6fc3df[NEON_BRIGHTNESS], 0 0 2px #6fc3df[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    'b8e7ff': "color: #d0f0ff; text-shadow: 0 0 2px #001722, 0 0 8px #6fc3df[NEON_BRIGHTNESS], 0 0 2px #6fc3df[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Yellow */
     'fede5d': "color: #f4eee4; text-shadow: 0 0 2px #393a33, 0 0 8px #f39f05[NEON_BRIGHTNESS], 0 0 2px #f39f05[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Green */
@@ -26,10 +43,18 @@
    * @returns {boolean}
    */
   const themeStylesExist = (tokensEl, replacements) => {
-    return tokensEl.innerText !== '' && 
-      Object.keys(replacements).every(color => {
-        return tokensEl.innerText.toLowerCase().includes(`#${color}`);
-      });
+    // Check if styles exist and contain at least some of our colors
+    if (tokensEl.innerText === '') return false;
+    
+    // Check for at least 3 of our main colors to verify it's our theme
+    const mainColors = ['fe4450', '72f1b8', '36f9f6', 'fede5d'];
+    let foundCount = 0;
+    for (const color of mainColors) {
+      if (tokensEl.innerText.toLowerCase().includes(`#${color}`)) {
+        foundCount++;
+      }
+    }
+    return foundCount >= 3;  // If we find at least 3 main colors, it's our theme
   };
 
   /**

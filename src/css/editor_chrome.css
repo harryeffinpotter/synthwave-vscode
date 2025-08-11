@@ -1,11 +1,17 @@
-.monaco-editor .margin, .monaco-editor .inputarea.ime-input {
-  background: transparent;
+/* GUTTER — match theme color and block any transparency/gradients */
+.monaco-editor .margin,
+.monaco-editor .margin-view-overlays,
+.monaco-editor .glyph-margin,
+.monaco-editor .line-numbers,
+.monaco-editor .inputarea.ime-input {
+  background: var(--vscode-editorGutter-background) !important;
+  background-image: none !important;
 }
 
 /* Add the subtle gradient to the editor background */
 .monaco-editor {
   background-color: transparent !important;
-  background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
+  background-image: linear-gradient(to bottom, #01000f 75%, #000725);
   background-size: auto 100vh;
   background-position: top;
   background-repeat: no-repeat;
