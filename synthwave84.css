@@ -9,10 +9,10 @@
   --ink:    #58FFEC;  /* near-white for bright tokens */
 
   /* glow tints */
-  --glow-blue:   rgba(0 104 164 / 0.77);
-  --glow-pink:   rgba(255 20 145 / 0.72);
-  --glow-green:  rgba(135 255 151 / 0.72);
-  --glow-purple: rgba(161 85 255 / 0.71);
+  --glow-blue:   rgba(0, 38, 255, 0.77);
+  --glow-pink:   rgba(255, 0, 136, 0.72);
+  --glow-green:  rgba(154, 255, 168, 0.72);
+  --glow-purple: rgba(189, 134, 255, 0.71);
   --shadow-hard: rgba(33 33 33 / 0.79);
 }
 
@@ -22,50 +22,52 @@
    to inspect the span class and swap numbers.
 */
 .mtk5 {  /* variables - matches JSON theme */
-  color: rgb(0 251 255) !important;  /* light green from JSON */
-  text-shadow: 0 0 2px #FFFFFF,
-               0 0 6px #0E75A897,
-               0 0 12px #51C5FF5C !important;
+  color: rgb(255, 255, 255) !important;  /* light green from JSON */
+  text-shadow: 0 0 2px #00b3ff,
+               0 0 6px #00aaff97,
+               0 0 12px #00aaff5c !important;
 }
 
 .mtk6 {  /* functions - matches JSON theme */
-  color: #FF77FF !important;  /* light pink/magenta from JSON */
+  color: #ffffff !important;  /* light pink/magenta from JSON */
   text-shadow: 0 0 2px #FF69FA,
                0 0 6px #FF69FA99,
                0 0 12px #FF69FA52 !important;
 }
 
 .mtk3 {  /* was dusty purple-blue */
-  color: #8B65FF !important;
+  color: #d7bfff !important;
   text-shadow: 0 0 2px #6430FF,
                0 0 6px #6430FF99,
                0 0 12px #6937FF7F !important;
 }
 
 .mtk4 {  /* keywords/storage - matches JSON theme */
-  color: #72F1B8 !important;  /* chartreuse from JSON */
+  color: #d5ffec !important;  /* chartreuse from JSON */
   text-shadow: 0 0 2px #72F1B8,
                0 0 6px #72F1B899,
                0 0 12px #72F1B87F !important;
 }
 
 .mtk10 { /* constants/numbers - matches JSON theme */
-  color: #B9FF8B !important;  /* coral/salmon from JSON */
-  text-shadow: 0 0 2px #B9FF8B,
-               0 0 6px #B9FF8B99,
-               0 0 12px #B9FF8B7F !important;
+  color: #fff8e0 !important;  /* coral/salmon from JSON */
+  text-shadow: 0 0 2px #fff18b,
+               0 0 6px #ffe5c499,
+               0 0 12px #ff5a5a7f !important;
 }
 
 .mtk7, .mtk9 { /* were white with red glow */
   color: #FFFFFF !important;
-  text-shadow: 0 0 2px #FF5858,
-               0 0 6px #FF585899,
-               0 0 12px #FF58587F !important;
+  text-shadow: 0 0 2px #0d00ff,
+               0 0 6px #0800ff99,
+               0 0 12px #0000ff6c !important;
 } 
 
 .mtk11 { /* strings */
-  color: #8bb8ff !important;
-  text-shadow: none !important;
+  color: #1c73ff !important;
+  text-shadow: 0 0 2px #0d00ff1f,
+               0 0 6px #0800ff5d,
+               0 0 12px #0000ff31 !important;
 }
 
 /* comments (Monaco often maps to .mtk1 or .mtk2 depending on language build). Ensure no glow. */

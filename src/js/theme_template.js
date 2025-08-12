@@ -26,7 +26,7 @@
     '72f1b8': "color: #72f1b8; text-shadow: 0 0 2px #000, 0 0 6px #72f1b8[NEON_BRIGHTNESS], 0 0 12px #72f1b8[NEON_BRIGHTNESS], 0 0 24px #72f1b8[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     '36f9f6': "color: #36f9f6; text-shadow: 0 0 2px #000, 0 0 12px #36f9f6[NEON_BRIGHTNESS], 0 0 24px #36f9f6[NEON_BRIGHTNESS], 0 0 56px #36f9f6[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Yellow attributes */
-    'fede5d': "color: #fede5d; text-shadow: 0 0 2px #000, 0 0 10px #fede5d[NEON_BRIGHTNESS], 0 0 20px #fede5d[NEON_BRIGHTNESS], 0 0 40px #fede5d[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    'fff7d7': "color: #fff7d7; text-shadow: 0 0 2px #000, 0 0 10px #fede5d[NEON_BRIGHTNESS], 0 0 20px #fede5d[NEON_BRIGHTNESS], 0 0 40px #fede5d[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Classes - hot pink */
     'ff36a1': "color: #ff36a1; text-shadow: 0 0 2px #000, 0 0 12px #ff66ff[NEON_BRIGHTNESS], 0 0 24px #ff66ff[NEON_BRIGHTNESS], 0 0 56px #ff66ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Inherited class */
