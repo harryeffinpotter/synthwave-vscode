@@ -95,7 +95,7 @@
     "editorError.foreground": "#fe4450",
     "editorWarning.foreground": "#72f1b8cc",
 
-    "editorGutter.background": "#051752",
+    "editorGutter.background": "#0B2A7A",
     "editorGutter.modifiedBackground": "#89AAE78f",
     "editorGutter.addedBackground": "#1a3d6dd6",
     "editorGutter.deletedBackground": "#fa2e46a4",

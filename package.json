@@ -25,7 +25,8 @@
     ],
     "activationEvents": [
         "onCommand:synthwave84.enableNeon",
-        "onCommand:synthwave84.disableNeon"
+        "onCommand:synthwave84.disableNeon",
+        "onCommand:synthwave84.openThemeStudio"
     ],
     "main": "./src/extension.js",
     "contributes": {
@@ -44,6 +45,10 @@
             {
                 "command": "synthwave84.disableNeon",
                 "title": "Synthwave '84: Disable Neon Dreams"
+            },
+            {
+                "command": "synthwave84.openThemeStudio",
+                "title": "Synthwave '84: Open Theme Studio"
             }
         ],
         "configuration": {

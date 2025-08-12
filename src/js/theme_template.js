@@ -6,11 +6,11 @@
     /* Strings (legacy black) */
     '000000': "color: #000000; text-shadow: 0 0 2px #000000, 0 0 10px #000000[NEON_BRIGHTNESS], 0 0 20px #000000[NEON_BRIGHTNESS], 0 0 40px #000000[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Variables — lighter cyan, brighter glow */
-    '8cd9ff': "color: #8cd9ff; text-shadow: 0 0 2px #000, 0 0 14px #6CD0FF[NEON_BRIGHTNESS], 0 0 28px #92DBFF[NEON_BRIGHTNESS], 0 0 64px #A4E1FF[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    '84edff': "color: #84edff; text-84edff: 0 0 2px #000, 0 0 14px #84edff[NEON_BRIGHTNESS], 0 0 28px #84edff[NEON_BRIGHTNESS], 0 0 64px #84edff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Variables (older builds) */
-    '0479ff': "color: #0479ff; text-shadow: 0 0 2px #000, 0 0 10px #0479ff[NEON_BRIGHTNESS], 0 0 20px #0479ff[NEON_BRIGHTNESS], 0 0 40px #0479ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    '84edff': "color: #84edff; text-shadow: 0 0 2px #000, 0 0 10px #84deff[NEON_BRIGHTNESS], 0 0 20px #84deff[NEON_BRIGHTNESS], 0 0 40px #84deff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Language variables */
-    'ffa7ad': "color: #ffa7ad; text-shadow: 0 0 2px #000, 0 0 10px #ffa7ad[NEON_BRIGHTNESS], 0 0 20px #ffa7ad[NEON_BRIGHTNESS], 0 0 40px #ffa7ad[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    '0008ff': "color: #0008ff; text-shadow: 0 0 2px #000, 0 0 10px #c7daff[NEON_BRIGHTNESS], 0 0 20px #c7daff[NEON_BRIGHTNESS], 0 0 40px #c7daff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Storage/Keywords — now bright pink keyword colour, stronger pink glow */
     'ff77ff': "color: #ff77ff; text-shadow: 0 0 2px #000, 0 0 16px #ff77ff[NEON_BRIGHTNESS], 0 0 28px #ff77ff[NEON_BRIGHTNESS], 0 0 64px #ff77ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Light blue refs */
@@ -28,7 +28,7 @@
     /* Yellow attributes */
     'fede5d': "color: #fede5d; text-shadow: 0 0 2px #000, 0 0 10px #fede5d[NEON_BRIGHTNESS], 0 0 20px #fede5d[NEON_BRIGHTNESS], 0 0 40px #fede5d[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Classes - hot pink */
-    'ff1493': "color: #ff1493; text-shadow: 0 0 2px #000, 0 0 12px #ff66ff[NEON_BRIGHTNESS], 0 0 24px #ff66ff[NEON_BRIGHTNESS], 0 0 56px #ff66ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    'ff36a1': "color: #ff36a1; text-shadow: 0 0 2px #000, 0 0 12px #ff66ff[NEON_BRIGHTNESS], 0 0 24px #ff66ff[NEON_BRIGHTNESS], 0 0 56px #ff66ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Inherited class */
     'ffcdae': "color: #ffcdae; text-shadow: 0 0 2px #000, 0 0 10px #ffcdae[NEON_BRIGHTNESS], 0 0 20px #ffcdae[NEON_BRIGHTNESS], 0 0 40px #ffcdae[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Functions - light mint, cyan edge */
@@ -55,7 +55,7 @@
     /* C# storage type */
     '020202': "color: #020202; text-shadow: 0 0 2px #000, 0 0 10px #020202[NEON_BRIGHTNESS], 0 0 20px #020202[NEON_BRIGHTNESS], 0 0 40px #020202[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Red/error */
-    'fe4450': "color: #fe4450; text-shadow: 0 0 2px #000, 0 0 10px #fe4450[NEON_BRIGHTNESS], 0 0 20px #fe4450[NEON_BRIGHTNESS], 0 0 40px #fe4450[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    'ff6e78': "color: #ff6e78; text-shadow: 0 0 2px #000, 0 0 10px #4E0005[NEON_BRIGHTNESS], 0 0 20px #830009D2[NEON_BRIGHTNESS], 0 0 40px #FF0011[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* Markup heading pink */
     'ff99e5': "color: #ff99e5; text-shadow: 0 0 2px #000, 0 0 10px #ff99e5[NEON_BRIGHTNESS], 0 0 20px #ff99e5[NEON_BRIGHTNESS], 0 0 40px #ff99e5[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     /* CSS pseudo/orange */
@@ -65,7 +65,7 @@
     '8bb8ff': "color: #6ea4ff;",
     'fff1bf': "color: #6ea4ff;",
     /* Comments — no glow */
-    '9185d3': "color: #9185d3;"
+    '9185d3': "color: #837CAD;"
   };
 
   //=============================

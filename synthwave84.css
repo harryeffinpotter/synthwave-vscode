@@ -22,10 +22,10 @@
    to inspect the span class and swap numbers.
 */
 .mtk5 {  /* variables - matches JSON theme */
-  color: #6DE9FF !important;  /* light green from JSON */
-  text-shadow: 0 0 2px #1FB4FF,
-               0 0 6px #1FB4FFC5,
-               0 0 12px #1FB4FF7F !important;
+  color: rgb(0 251 255) !important;  /* light green from JSON */
+  text-shadow: 0 0 2px #FFFFFF,
+               0 0 6px #0E75A897,
+               0 0 12px #51C5FF5C !important;
 }
 
 .mtk6 {  /* functions - matches JSON theme */
