@@ -39,11 +39,25 @@ function activate(context) {
 			// const version = context.globalState.get(`${context.extensionName}.version`);
 
 			// generate production theme JS
-			const chromeStyles = fs.readFileSync(__dirname + '/css/editor_chrome.css', 'utf-8');
-			const jsTemplate = fs.readFileSync(__dirname + '/js/theme_template.js', 'utf-8');
-			const themeWithGlow = jsTemplate.replace(/\[DISABLE_GLOW\]/g, disableGlow);
-			const themeWithChrome = themeWithGlow.replace(/\[CHROME_STYLES\]/g, chromeStyles);
-			const finalTheme = themeWithChrome.replace(/\[NEON_BRIGHTNESS\]/g, neonBrightness);
+            const chromeStyles = fs.readFileSync(__dirname + '/css/editor_chrome.css', 'utf-8');
+            const jsTemplate = fs.readFileSync(__dirname + '/js/theme_template.js', 'utf-8');
+
+            // Optional user glow config
+            let userConfig = { overrides: {}, noglowHexes: [] };
+            try {
+                const cfgPath = path.join(__dirname, 'glow.config.json');
+                if (fs.existsSync(cfgPath)) {
+                    userConfig = JSON.parse(fs.readFileSync(cfgPath, 'utf-8')) || userConfig;
+                }
+            } catch (e) {
+                // ignore config errors and fall back to defaults
+            }
+
+            const themeWithGlow = jsTemplate.replace(/\[DISABLE_GLOW\]/g, disableGlow);
+            const themeWithChrome = themeWithGlow.replace(/\[CHROME_STYLES\]/g, chromeStyles);
+            const themeWithBrightness = themeWithChrome.replace(/\[NEON_BRIGHTNESS\]/g, neonBrightness);
+            const themeWithUserOverrides = themeWithBrightness.replace(/\[USER_OVERRIDES\]/g, JSON.stringify(userConfig.overrides || {}));
+            const finalTheme = themeWithUserOverrides.replace(/\[USER_NOGLOW\]/g, JSON.stringify((userConfig.noglowHexes || []).map(h => String(h).toLowerCase())));
 			fs.writeFileSync(templateFile, finalTheme, "utf-8");
 
 			// modify workbench html

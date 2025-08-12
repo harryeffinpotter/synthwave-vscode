@@ -1,0 +1,12 @@
+{
+  "overrides": {
+    "8cd9ff": "color: #8cd9ff; text-shadow: 0 0 2px #000, 0 0 14px #6CD0FF[NEON_BRIGHTNESS], 0 0 28px #92DBFF[NEON_BRIGHTNESS], 0 0 64px #A4E1FF[NEON_BRIGHTNESS]; backface-visibility: hidden;"
+  },
+  "noglowHexes": [
+    "6ea4ff",
+    "9185d3",
+    "ffb6ff",
+    "9fdcff"
+  ]
+}
+

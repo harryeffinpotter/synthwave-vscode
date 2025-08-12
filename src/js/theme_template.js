@@ -69,6 +69,26 @@
   };
 
   //=============================
+  // User config injection hooks
+  //=============================
+  // Provided by extension at build time
+  const userOverrides = [USER_OVERRIDES];
+  const userNoGlow = [USER_NOGLOW]; // array of hex strings (lowercased) with no glow
+
+  // Build merged overrides, and add explicit no-glow entries
+  const mergedOverrides = (() => {
+    const out = { ...tokenReplacements, ...(userOverrides || {}) };
+    if (Array.isArray(userNoGlow)) {
+      for (const hex of userNoGlow) {
+        if (typeof hex === 'string' && hex.length === 6) {
+          out[hex.toLowerCase()] = `color: #${hex.toLowerCase()};`;
+        }
+      }
+    }
+    return out;
+  })();
+
+  //=============================
   // Helper functions
   //=============================
 
@@ -167,9 +187,9 @@
       // Replace tokens with glow styles
       let updatedThemeStyles = initialThemeStyles;
       if (!disableGlow) {
-        // Apply explicit overrides first, then a generic same-color glow to anything left
-        const withOverrides = replaceTokens(initialThemeStyles, tokenReplacements);
-        updatedThemeStyles = applyGenericGlow(withOverrides, tokenReplacements);
+        // Apply explicit overrides (including user + no-glow), then generic same-color glow to anything left
+        const withOverrides = replaceTokens(initialThemeStyles, mergedOverrides);
+        updatedThemeStyles = applyGenericGlow(withOverrides, mergedOverrides);
       }
       
       /* append the remaining styles */
