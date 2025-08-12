@@ -2,18 +2,18 @@
 :root {
   --bg1: #101a28;  /* ultra-dark royal blue */
   --bg2: #0A1018;  /* deep navy */
-  --blue:   #A0D8EF;  /* light sky blue */
-  --pink:   #FFB3BA;  /* light pink */
-  --green:  #D3FFCE;  /* light mint */
-  --purple: #E3B3FF;  /* light lavender */
-  --ink:    #F5FAFF;  /* near-white for bright tokens */
+  --blue:   #14BCFF;  /* light sky blue */
+  --pink:   #FF76EF;  /* light pink */
+  --green:  #ABFFA2;  /* light mint */
+  --purple: #C4A4FF;  /* light lavender */
+  --ink:    #58FFEC;  /* near-white for bright tokens */
 
   /* glow tints */
-  --glow-blue:   rgba(170, 234, 255, 0.902);
-  --glow-pink:   rgba(255, 20, 147, 1);
-  --glow-green:  rgba(199, 255, 143, 0.719);
-  --glow-purple: rgba(205, 118, 255, 0.749);
-  --shadow-hard: rgba(0, 12, 26, 0.792);
+  --glow-blue:   rgba(0 104 164 / 0.77);
+  --glow-pink:   rgba(255 20 145 / 0.72);
+  --glow-green:  rgba(135 255 151 / 0.72);
+  --glow-purple: rgba(161 85 255 / 0.71);
+  --shadow-hard: rgba(33 33 33 / 0.79);
 }
 
 /* ======= tokens by Monaco class =======
@@ -21,88 +21,63 @@
    If a thing you want doesn't change, use DevTools
    to inspect the span class and swap numbers.
 */
-.mtk5 {  /* variables - BRIGHT CYAN WITH PROPER NEON GLOW */
-  color: #51ffff !important;
-  text-shadow: 0 0 1px #00DDDD,
-               0 0 2px #fff4ff,
-               0 0 4px #fff4ff,
-               0 0 8px #fff4ff,
-               0 0 12px #fff4ff,
-               0 0 16px #fff4ff,
-               0 0 24px #fff4ff,
-               0 0 32px #fff4ff,
-               0 0 48px #fff4ff,
-               0 0 64px #fff4ff;
+.mtk5 {  /* variables - matches JSON theme */
+  color: #6DE9FF !important;  /* light green from JSON */
+  text-shadow: 0 0 2px #1FB4FF,
+               0 0 6px #1FB4FFC5,
+               0 0 12px #1FB4FF7F !important;
 }
 
-.mtk6 {  /* ULTRA BRIGHT PINK WITH MEGA NEON GLOW */
-  color: #FF1493 !important;
-  text-shadow: 0 0 2px #FF69B4,
-               0 0 4px #FF1493,
-               0 0 8px #FF1493,
-               0 0 12px #FF00FF,
-               0 0 16px #FF00FF,
-               0 0 24px #FF1493,
-               0 0 32px #FF1493,
-               0 0 48px #FF00FF,
-               0 0 64px #FF00FF,
-               0 0 96px #FF1493;
+.mtk6 {  /* functions - matches JSON theme */
+  color: #FF77FF !important;  /* light pink/magenta from JSON */
+  text-shadow: 0 0 2px #FF69FA,
+               0 0 6px #FF69FA99,
+               0 0 12px #FF69FA52 !important;
 }
 
 .mtk3 {  /* was dusty purple-blue */
-  color: var(--purple);
-  text-shadow: 0 0 2px var(--shadow-hard),
-               0 0 6px var(--glow-purple),
-               0 0 12px var(--glow-purple);
+  color: #8B65FF !important;
+  text-shadow: 0 0 2px #6430FF,
+               0 0 6px #6430FF99,
+               0 0 12px #6937FF7F !important;
 }
 
-.mtk4 {  /* yellow keywords (const, return, etc) - HOT PINK WITH INTENSE GLOW */
-  color: #ffbdff !important;
-  text-shadow: 0 0 1px #ffe3ff,
-               0 0 2px #fff4ff,
-               0 0 4px #fff4ff,
-               0 0 8px #fff4ff,
-               0 0 12px #fff4ff,
-               0 0 16px #fff4ff,
-               0 0 24px #fff4ff,
-               0 0 32px #fff4ff,
-               0 0 48px #fff4ff,
-               0 0 64px #fff4ff;
+.mtk4 {  /* keywords/storage - matches JSON theme */
+  color: #72F1B8 !important;  /* chartreuse from JSON */
+  text-shadow: 0 0 2px #72F1B8,
+               0 0 6px #72F1B899,
+               0 0 12px #72F1B87F !important;
 }
 
-.mtk10 { /* bright “white” with cyan glow */
-  color: var(--ink);
-  text-shadow: 0 0 2px var(--shadow-hard),
-               0 0 6px var(--glow-blue),
-               0 0 14px var(--glow-blue);
+.mtk10 { /* constants/numbers - matches JSON theme */
+  color: #B9FF8B !important;  /* coral/salmon from JSON */
+  text-shadow: 0 0 2px #B9FF8B,
+               0 0 6px #B9FF8B99,
+               0 0 12px #B9FF8B7F !important;
 }
 
 .mtk7, .mtk9 { /* were white with red glow */
-  color: var(--ink);
-  text-shadow: 0 0 2px var(--shadow-hard),
-               0 0 10px var(--glow-purple),
-               0 0 22px var(--glow-purple);
+  color: #FFFFFF !important;
+  text-shadow: 0 0 2px #FF5858,
+               0 0 6px #FF585899,
+               0 0 12px #FF58587F !important;
+} 
+
+.mtk11 { /* strings */
+  color: #8bb8ff !important;
+  text-shadow: none !important;
 }
 
-.mtk11 { /* was neon green with green glow */
-  color: var(--green);
-  text-shadow: 0 0 2px var(--shadow-hard),
-               0 0 10px var(--glow-green),
-               0 0 28px var(--glow-green);
+/* comments (Monaco often maps to .mtk1 or .mtk2 depending on language build). Ensure no glow. */
+.mtk1, .mtk2 { 
+  text-shadow: none !important;
 }
 
-.mtk8, .mtk14 { /* keywords - BRIGHT LIME GREEN WITH INTENSE NEON GLOW */
-  color: #aeffae !important;
-  text-shadow: 0 0 1px #eeffee,
-               0 0 2px #e5ffe5,
-               0 0 4px #e9ffe9,
-               0 0 8px #fafffa,
-               0 0 12px #ddffdd,
-               0 0 16px #e8ffe8,
-               0 0 24px #e9ffe9,
-               0 0 32px #eeffee,
-               0 0 48px #f0fff0,
-               0 0 64px #ebffeb;
+.mtk8, .mtk14 { /* control keywords - matches JSON theme */
+  color: #FF9D9D !important;  /* pale lime from JSON */
+  text-shadow: 0 0 2px #FF9D9D,
+               0 0 6px #FF9D9D99,
+               0 0 12px #FF9D9D7F !important;
 }
 
 /* ======= GUTTER / MARGIN ======= 

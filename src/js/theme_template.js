@@ -3,33 +3,69 @@
   // Theme replacement CSS (Glow styles)
   //====================================
   const tokenReplacements = {
-    /* Red */
-    'fe4450': "color: #fff5f6; text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c[NEON_BRIGHTNESS], 0 0 5px #fc1f2c[NEON_BRIGHTNESS], 0 0 25px #fc1f2c[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Light neon pink */
-    'ff99e5': "color: #ffccf0; text-shadow: 0 0 2px #100c0f, 0 0 5px #ff66d933, 0 0 10px #fff3; backface-visibility: hidden;",
-    /* Cyan/Light Blue for variables */
-    '6fc3df': "color: #b8e7ff; text-shadow: 0 0 2px #000, 0 0 10px #00d4ff[NEON_BRIGHTNESS], 0 0 20px #00d4ff[NEON_BRIGHTNESS], 0 0 40px #00d4ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* BRIGHT CYAN for variables */
-    '00ffff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #00ffff[NEON_BRIGHTNESS], 0 0 20px #00ffff[NEON_BRIGHTNESS], 0 0 40px #00ffff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* LIGHT PINK for functions */
-    'ffb3ff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ff00ff[NEON_BRIGHTNESS], 0 0 20px #ff00ff[NEON_BRIGHTNESS], 0 0 40px #ff00ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* HOT PINK for classes */
-    'ff1493': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ff1493[NEON_BRIGHTNESS], 0 0 20px #ff1493[NEON_BRIGHTNESS], 0 0 40px #ff1493[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* LIGHT GREEN for keywords */
-    '7fff00': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #7fff00[NEON_BRIGHTNESS], 0 0 20px #7fff00[NEON_BRIGHTNESS], 0 0 40px #7fff00[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* WHITE for operators */
+    /* Strings (legacy black) */
+    '000000': "color: #000000; text-shadow: 0 0 2px #000000, 0 0 10px #000000[NEON_BRIGHTNESS], 0 0 20px #000000[NEON_BRIGHTNESS], 0 0 40px #000000[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Variables — lighter cyan, brighter glow */
+    '8cd9ff': "color: #8cd9ff; text-shadow: 0 0 2px #000, 0 0 14px #6CD0FF[NEON_BRIGHTNESS], 0 0 28px #92DBFF[NEON_BRIGHTNESS], 0 0 64px #A4E1FF[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Variables (older builds) */
+    '0479ff': "color: #0479ff; text-shadow: 0 0 2px #000, 0 0 10px #0479ff[NEON_BRIGHTNESS], 0 0 20px #0479ff[NEON_BRIGHTNESS], 0 0 40px #0479ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Language variables */
+    'ffa7ad': "color: #ffa7ad; text-shadow: 0 0 2px #000, 0 0 10px #ffa7ad[NEON_BRIGHTNESS], 0 0 20px #ffa7ad[NEON_BRIGHTNESS], 0 0 40px #ffa7ad[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Storage/Keywords — now bright pink keyword colour, stronger pink glow */
+    'ff77ff': "color: #ff77ff; text-shadow: 0 0 2px #000, 0 0 16px #ff77ff[NEON_BRIGHTNESS], 0 0 28px #ff77ff[NEON_BRIGHTNESS], 0 0 64px #ff77ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Light blue refs */
+    '63d3ff': "color: #63d3ff; text-shadow: 0 0 2px #000, 0 0 10px #63d3ff[NEON_BRIGHTNESS], 0 0 20px #63d3ff[NEON_BRIGHTNESS], 0 0 40px #63d3ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    'a9c8ff': "color: #a9c8ff; text-shadow: 0 0 2px #000, 0 0 10px #a9c8ff[NEON_BRIGHTNESS], 0 0 20px #a9c8ff[NEON_BRIGHTNESS], 0 0 40px #a9c8ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Constants/numbers */
+    'f97e72': "color: #f97e72; text-shadow: 0 0 2px #000, 0 0 10px #f97e72[NEON_BRIGHTNESS], 0 0 20px #f97e72[NEON_BRIGHTNESS], 0 0 40px #f97e72[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Character escape */
+    'adffd6': "color: #adffd6; text-shadow: 0 0 2px #000, 0 0 10px #adffd6[NEON_BRIGHTNESS], 0 0 20px #adffd6[NEON_BRIGHTNESS], 0 0 40px #adffd6[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Entity */
+    'ffc6ff': "color: #ffc6ff; text-shadow: 0 0 2px #000, 0 0 10px #ffc6ff[NEON_BRIGHTNESS], 0 0 20px #ffc6ff[NEON_BRIGHTNESS], 0 0 40px #ffc6ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* HTML tags */
+    '72f1b8': "color: #72f1b8; text-shadow: 0 0 2px #000, 0 0 6px #72f1b8[NEON_BRIGHTNESS], 0 0 12px #72f1b8[NEON_BRIGHTNESS], 0 0 24px #72f1b8[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    '36f9f6': "color: #36f9f6; text-shadow: 0 0 2px #000, 0 0 12px #36f9f6[NEON_BRIGHTNESS], 0 0 24px #36f9f6[NEON_BRIGHTNESS], 0 0 56px #36f9f6[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Yellow attributes */
+    'fede5d': "color: #fede5d; text-shadow: 0 0 2px #000, 0 0 10px #fede5d[NEON_BRIGHTNESS], 0 0 20px #fede5d[NEON_BRIGHTNESS], 0 0 40px #fede5d[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Classes - hot pink */
+    'ff1493': "color: #ff1493; text-shadow: 0 0 2px #000, 0 0 12px #ff66ff[NEON_BRIGHTNESS], 0 0 24px #ff66ff[NEON_BRIGHTNESS], 0 0 56px #ff66ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Inherited class */
+    'ffcdae': "color: #ffcdae; text-shadow: 0 0 2px #000, 0 0 10px #ffcdae[NEON_BRIGHTNESS], 0 0 20px #ffcdae[NEON_BRIGHTNESS], 0 0 40px #ffcdae[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Functions - light mint, cyan edge */
+    'b6ffe2': "color: #b6ffe2; text-shadow: 0 0 2px #000, 0 0 12px #8cd9ff[NEON_BRIGHTNESS], 0 0 24px #8cd9ff[NEON_BRIGHTNESS], 0 0 56px #a4e1ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* JS numerics (lighter cyan) */
+    'a6f3ff': "color: #a6f3ff; text-shadow: 0 0 2px #000, 0 0 14px #a6f3ff[NEON_BRIGHTNESS], 0 0 28px #a6f3ff[NEON_BRIGHTNESS], 0 0 64px #a6f3ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Control keywords (light blue base) */
+    '9fdcff': "color: #9fdcff; text-shadow: 0 0 2px #000, 0 0 16px #66eeff[NEON_BRIGHTNESS], 0 0 28px #66eeff[NEON_BRIGHTNESS], 0 0 64px #66eeff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Operators - theme uses b2c4ff; prefer crisp white glow but keep token color */
+    'b2c4ff': "color: #b2c4ff; text-shadow: 0 0 2px #000, 0 0 10px #ffffff[NEON_BRIGHTNESS], 0 0 20px #ffffff[NEON_BRIGHTNESS], 0 0 40px #ffffff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
     'ffffff': "color: #ffffff; text-shadow: 0 0 2px #000, 0 0 10px #ffffff[NEON_BRIGHTNESS], 0 0 20px #ffffff[NEON_BRIGHTNESS], 0 0 40px #ffffff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Dark cyan for strings */
-    '008b8b': "color: #00ffff; text-shadow: 0 0 2px #000, 0 0 10px #008b8b[NEON_BRIGHTNESS], 0 0 20px #008b8b[NEON_BRIGHTNESS], 0 0 40px #008b8b[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Light Blue (was yellow) */
-    'a0d8ef': "color: #d0f0ff; text-shadow: 0 0 2px #001722, 0 0 8px #6fc3df[NEON_BRIGHTNESS], 0 0 2px #6fc3df[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    'b8e7ff': "color: #d0f0ff; text-shadow: 0 0 2px #001722, 0 0 8px #6fc3df[NEON_BRIGHTNESS], 0 0 2px #6fc3df[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Yellow */
-    'fede5d': "color: #f4eee4; text-shadow: 0 0 2px #393a33, 0 0 8px #f39f05[NEON_BRIGHTNESS], 0 0 2px #f39f05[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Green */
-    '72f1b8': "color: #72f1b8; text-shadow: 0 0 2px #100c0f, 0 0 10px #257c55[NEON_BRIGHTNESS], 0 0 35px #212724[NEON_BRIGHTNESS]; backface-visibility: hidden;",
-    /* Blue */
-    '36f9f6': "color: #fdfdfd; text-shadow: 0 0 2px #001716, 0 0 3px #03edf9[NEON_BRIGHTNESS], 0 0 5px #03edf9[NEON_BRIGHTNESS], 0 0 8px #03edf9[NEON_BRIGHTNESS]; backface-visibility: hidden;"
+    /* Unit */
+    'ffbfba': "color: #ffbfba; text-shadow: 0 0 2px #000, 0 0 10px #ffbfba[NEON_BRIGHTNESS], 0 0 20px #ffbfba[NEON_BRIGHTNESS], 0 0 40px #ffbfba[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Support */
+    'ff9aa1': "color: #ff9aa1; text-shadow: 0 0 2px #000, 0 0 10px #ff9aa1[NEON_BRIGHTNESS], 0 0 20px #ff9aa1[NEON_BRIGHTNESS], 0 0 40px #ff9aa1[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Support variable */
+    'b4beff': "color: #b4beff; text-shadow: 0 0 2px #000, 0 0 10px #b4beff[NEON_BRIGHTNESS], 0 0 20px #b4beff[NEON_BRIGHTNESS], 0 0 40px #b4beff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Object keys — lighter cyan */
+    'bfe9ff': "color: #bfe9ff; text-shadow: 0 0 2px #000, 0 0 14px #bfe9ff[NEON_BRIGHTNESS], 0 0 28px #bfe9ff[NEON_BRIGHTNESS], 0 0 64px #bfe9ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Embedded punctuation */
+    'ffec9e': "color: #ffec9e; text-shadow: 0 0 2px #000, 0 0 10px #ffec9e[NEON_BRIGHTNESS], 0 0 20px #ffec9e[NEON_BRIGHTNESS], 0 0 40px #ffec9e[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Python function call */
+    '7fb2ff': "color: #7fb2ff; text-shadow: 0 0 2px #000, 0 0 10px #7fb2ff[NEON_BRIGHTNESS], 0 0 20px #7fb2ff[NEON_BRIGHTNESS], 0 0 40px #7fb2ff[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* C# storage type */
+    '020202': "color: #020202; text-shadow: 0 0 2px #000, 0 0 10px #020202[NEON_BRIGHTNESS], 0 0 20px #020202[NEON_BRIGHTNESS], 0 0 40px #020202[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Red/error */
+    'fe4450': "color: #fe4450; text-shadow: 0 0 2px #000, 0 0 10px #fe4450[NEON_BRIGHTNESS], 0 0 20px #fe4450[NEON_BRIGHTNESS], 0 0 40px #fe4450[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Markup heading pink */
+    'ff99e5': "color: #ff99e5; text-shadow: 0 0 2px #000, 0 0 10px #ff99e5[NEON_BRIGHTNESS], 0 0 20px #ff99e5[NEON_BRIGHTNESS], 0 0 40px #ff99e5[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* CSS pseudo/orange */
+    'dd5500': "color: #dd5500; text-shadow: 0 0 2px #000, 0 0 10px #dd5500[NEON_BRIGHTNESS], 0 0 20px #dd5500[NEON_BRIGHTNESS], 0 0 40px #dd5500[NEON_BRIGHTNESS]; backface-visibility: hidden;",
+    /* Strings — no glow at all */
+    '6ea4ff': "color: #6ea4ff;",
+    '8bb8ff': "color: #6ea4ff;",
+    'fff1bf': "color: #6ea4ff;",
+    /* Comments — no glow */
+    '9185d3': "color: #9185d3;"
   };
 
   //=============================
@@ -67,6 +103,25 @@
     const re = new RegExp(`color: #${color};`, 'gi');
     return acc.replace(re, replacements[color]);
   }, styles);
+
+  /**
+   * @summary Add a default glow that matches each token's own color when no explicit override exists
+   * @param {string} styles CSS text
+   * @param {object} overrides explicit color->style map used above
+   * @returns {string}
+   */
+  const applyGenericGlow = (styles, overrides) => {
+    const colorRegex = /color:\s*#([0-9a-fA-F]{6});/g;
+    return styles.replace(colorRegex, (fullMatch, hex) => {
+      const lower = hex.toLowerCase();
+      // If an explicit override exists, leave it for the previous replacement
+      if (overrides[lower]) return fullMatch;
+      // Do not add generic glow to strings or comments like classes .mtk11 or comment scopes; rely on explicit map
+      // Strings and comments are handled above and keep no glow.
+      // Avoid over-glowing pure white; keep it but with its own glow color
+      return `color: #${lower}; text-shadow: 0 0 2px #000, 0 0 10px #${lower}[NEON_BRIGHTNESS], 0 0 20px #${lower}[NEON_BRIGHTNESS], 0 0 40px #${lower}[NEON_BRIGHTNESS]; backface-visibility: hidden;`;
+    });
+  };
 
   /**
    * @summary Checks if a theme is applied, and that the theme belongs to the Synthwave 84 family
@@ -110,9 +165,12 @@
       const initialThemeStyles = tokensEl.innerText;
       
       // Replace tokens with glow styles
-      let updatedThemeStyles = !disableGlow 
-        ? replaceTokens(initialThemeStyles, tokenReplacements) 
-        : initialThemeStyles;
+      let updatedThemeStyles = initialThemeStyles;
+      if (!disableGlow) {
+        // Apply explicit overrides first, then a generic same-color glow to anything left
+        const withOverrides = replaceTokens(initialThemeStyles, tokenReplacements);
+        updatedThemeStyles = applyGenericGlow(withOverrides, tokenReplacements);
+      }
       
       /* append the remaining styles */
       updatedThemeStyles = `${updatedThemeStyles}[CHROME_STYLES]`;
